@@ -23,11 +23,11 @@
 		<properties>
 		    <!-- dados da conexao -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://localhost/ap10_db"/>
-			<property name="hibernate.connection.username" value="root"/>
-			<property name="hibernate.connection.password" value="123456"/> -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/martins_impressoras"/>
-			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="hibernate.connection.url" value="jdbc:mysql://ix35ishg8jgzxdel:ww96qjx134a0zvsl@wvulqmhjj9tbtc1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/fpf9b7p4hv0izzar"/>
+			<property name="hibernate.connection.username" value="ix35ishg8jgzxdel"/>
+			<property name="hibernate.connection.password" value="ww96qjx134a0zvsl"/>
+			<!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/martins_impressoras"/>
+			<property name="javax.persistence.jdbc.user" value="root"/> -->
 			
 			<!-- <property name="hibernate.connection.password" value="123456"/> -->
 			
