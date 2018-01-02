@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.wing.ws.filter.TesteFilter&apos; to &apos;CacheControlResponseFilter&apos;&#x0D;&#x0A;- Original project: &apos;impressora-web&apos;&#x0D;&#x0A;- Original element: &apos;com.wing.ws.filter.TesteFilter&apos;&#x0D;&#x0A;- Renamed element: &apos;com.wing.ws.filter.CacheControlResponseFilter&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TesteFilter&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.wing.ws.filter{TesteFilter.java[TesteFilter" matchStrategy="1" name="CacheControlResponseFilter" qualified="false" references="true" similarDeclarations="false" stamp="1507033090946" textual="false" version="1.0"/>
+</session>

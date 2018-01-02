@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
+
+    <display-name>impressora</display-name>
+    
+    <listener>
+        <listener-class>com.wing.ws.GuiceContextListener</listener-class>
+    </listener>
+    
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+        <init-param>
+		    <param-name>cors.allowed.origins</param-name>
+		    <param-value>*</param-value>
+		  </init-param>
+		  <init-param>
+		    <param-name>cors.allowed.methods</param-name>
+		    <param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
+		  </init-param>
+		  <init-param>
+		    <param-name>cors.allowed.headers</param-name>
+		    <param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers</param-value>
+		  </init-param>
+		  <init-param>
+		    <param-name>cors.exposed.headers</param-name>
+		    <param-value>Access-Control-Allow-Origin,Access-Control-Allow-Credentials</param-value>
+		  </init-param>
+		  <init-param>
+		    <param-name>cors.support.credentials</param-name>
+		    <param-value>true</param-value>
+		  </init-param>
+		  <init-param>
+		    <param-name>cors.preflight.maxage</param-name>
+		    <param-value>10</param-value>
+		  </init-param>
+        
+    </filter>
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <!-- <filter>
+		<filter-name>authFilter</filter-name>
+		<filter-class>com.wing.ws.filter.ServletFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>authFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+	
+	
+    <servlet>
+		<servlet-name>file-servlet</servlet-name>
+		<servlet-class>
+         	com.wing.ws.file.FileServlet
+         </servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>file-servlet</servlet-name>
+		<url-pattern>/file/upload</url-pattern>
+	</servlet-mapping>
+	
+
+    <!-- <filter>
+        <filter-name>General Filter</filter-name>
+        <filter-class>com.wing.ws.GeneralFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>General Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> -->
+
+    <filter>
+        <filter-name>GuiceFilter</filter-name>
+        <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>GuiceFilter</filter-name>
+        <url-pattern>/impressora/*</url-pattern>
+    </filter-mapping>
+	<session-config>
+	    <tracking-mode>URL</tracking-mode>
+	    <!-- <tracking-mode>COOKIE</tracking-mode> -->
+	</session-config>
+</web-app>

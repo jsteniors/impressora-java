@@ -1,0 +1,5 @@
+1508333054381	Extract method 'extracted'
+1508333144700	Extract local variable 'key'
+1508344470237	Delete element
+1508412798754	Delete element
+1508417502099	Rename field 'rmf'
